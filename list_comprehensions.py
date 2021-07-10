@@ -20,14 +20,22 @@ numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 17, 19, 23, 256, -8, -4, -2, 5, -
 # use list comprehension syntax to produce output like ['Mango', 'Kiwi', 'Strawberry', etc...]
 
 capitalized_fruits=[]
+templist=[]
+string_for_joining = ""
 
-for fruit in fruits:
-    capitalized_fruits.append(fruit.capitalize())
-    if fruit.count(" ") > 0:
-        templist = fruit.split(" ")
-        for temp in templist:
-        print(templist)
-
+for fruit in fruits: #create loop to filter through fruits
+    if fruit.count(" ") > 0: #check for any fruit with spaces
+        placeholder = fruit.split(" ") #create a temporary placeholder where fruit is spilt
+        for split in placeholder: #cycle through the words that split
+            templist.append(split.capitalize()) #capitalize all split words and save new version into templist
+        for temp in templist: #cycle through templist
+            if string_for_joining == "": # if string is empty add temp string with no space
+                string_for_joining += temp
+            else:
+                string_for_joining += " " + temp# else if string is not empty add a space before temp
+        capitalized_fruits.append(string_for_joining) # add new string to capitalize_fruits
+    else:
+        capitalized_fruits.append(fruit.capitalize())#if no spaces just capitalize fruit and add to main list
 
 print(capitalized_fruits)
 
