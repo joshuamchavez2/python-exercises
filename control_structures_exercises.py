@@ -103,71 +103,78 @@
 # for i in range(1, 10):
 #     print(str(i)* i)
 
-# 1
-# 22
-# 333
-# 4444
-# 55555
-# 666666
-# 7777777
-# 88888888
-# 999999999
-# break and continue
 
 # Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
 
-number_to_skip = input("Select an odd number between 1 and 50>")
+# number_to_skip = input("Select an odd number between 1 and 50>")
+# if number_to_skip.isdigit():
+#     if int(number_to_skip) % 2 != 0 and int(number_to_skip) in range(1,51):
+#         number = 1 
+#         while number <=50:
+#             if number == int(number_to_skip):
+#                 print(f"Yikes! Skipping number: {number_to_skip}")
+#             else:
+#                 print(f"Here is an odd number: {number}")
+#             number +=2
+#     else:
+#         print("Your number is not odd and/or is not between 1 and 50")
+# else:
+#     print("You did not enter a number")
 
-number = 1 
-while number <=50:
-    if number == int(number_to_skip):
-        print(f"Yikes! Skipping number: {number_to_skip}")
-    else:
-        print(f"Here is an odd number: {number}")
-    number +=2 
+#   The input function can be used to prompt for input and use that input in your python code.
+#   Prompt the user to enter a positive number and write a loop that counts from 0 to that number.
+#   (Hints: first make sure that the value the user entered is a valid number,
+#   also note that the input function returns a string, so you'll need to convert this to a numeric type.)
 
-# Your output should look like this:
+# entered_number = input("Please enter a number>")
+
+# if entered_number.isdigit():
+#     for i in range(0, int(entered_number)+1):
+#         print(i)
+# else:
+#     print("You did not enter a numeric value.")
 
 
-# Number to skip is: 27
+# Write a program that prompts the user for a positive integer.
+# Next write a loop that prints out the numbers from the number the user entered down to 1.
 
-# Here is an odd number: 1
-# Here is an odd number: 3
-# Here is an odd number: 5
-# Here is an odd number: 7
-# Here is an odd number: 9
-# Here is an odd number: 11
-# Here is an odd number: 13
-# Here is an odd number: 15
-# Here is an odd number: 17
-# Here is an odd number: 19
-# Here is an odd number: 21
-# Here is an odd number: 23
-# Here is an odd number: 25
-# Yikes! Skipping number: 27
-# Here is an odd number: 29
-# Here is an odd number: 31
-# Here is an odd number: 33
-# Here is an odd number: 35
-# Here is an odd number: 37
-# Here is an odd number: 39
-# Here is an odd number: 41
-# Here is an odd number: 43
-# Here is an odd number: 45
-# Here is an odd number: 47
-# Here is an odd number: 49
-# The input function can be used to prompt for input and use that input in your python code. Prompt the user to enter a positive number and write a loop that counts from 0 to that number. (Hints: first make sure that the value the user entered is a valid number, also note that the input function returns a string, so you'll need to convert this to a numeric type.)
-
-# Write a program that prompts the user for a positive integer. Next write a loop that prints out the numbers from the number the user entered down to 1.
+# positive_integar = input("Please enter a positive integer>")
+# if positive_integar.isdigit():
+#     if int(positive_integar)>0:
+#         i = int(positive_integar)
+#         while int(i) >= 1:
+#             print(i)
+#             i -= 1
+#     else:
+#         print("You did not enter a positive integer")
+# else:
+#     print("You did not enter numeric value.")
 
 # Fizzbuzz
 
-# One of the most common interview questions for entry-level programmers is the FizzBuzz test. Developed by Imran Ghory, the test is designed to test basic looping and conditional logic skills.
+# One of the most common interview questions for entry-level programmers is the FizzBuzz test.
+# Developed by Imran Ghory, the test is designed to test basic looping and conditional logic skills.
 
 # Write a program that prints the numbers from 1 to 100.
 # For multiples of three print "Fizz" instead of the number
 # For the multiples of five print "Buzz".
 # For numbers which are multiples of both three and five print "FizzBuzz".
+
+# numbers = list(range(1, 101))
+# newlist=[]
+# for number in numbers:
+#     if number % 3 == 0 and number % 5 ==0:
+#         newlist.append("FizzBuzz")
+#     elif number % 3 == 0:
+#         newlist.append("Fizz")
+#     elif number % 5 == 0:
+#         newlist.append("Buzz")
+#     else:
+#         newlist.append(number)
+# for value in range(len(newlist)):
+#     print(newlist[value])
+
+
 # Display a table of powers.
 
 # Prompt the user to enter an integer.
@@ -179,25 +186,81 @@ while number <=50:
 
 # What number would you like to go up to? 5
 
-# Here is your table!
+# number = input("what number would you like to go up too?>")
+# num = int(number)
+# index = 1
+# stop_condition = False
+# while (stop_condition == False):
+#     num = int(number)
+#     #print("number  | squared  | cubed")
+#     #print("------  | -------  | -----")
+#     print(f"{'number': <7}|{'squared': ^7}|{'cubed': >3}")
+#     print(f"{'-------': <7}|{'-------': ^7}|{'------': >3}")
+#     while index <= num:
+#     #print(f"{index}      | {index**2}      | {index**3}")  
+#         print(f"{index: <7}|{index**2: ^7}|{index**3: >3}")
+#         index +=1
+#     stop_loop = input("Enter quit to exit or yes to continue>")
+#     if stop_loop.lower() == 'quit':
+#         stop_condition = True
+#     elif stop_loop.lower() == 'yes':
+#         number = input("what number would you like to go up too?>")
+#         index = 1
+#     else: 
+#         stop_condition = True
 
-# number | squared | cubed
-# ------ | ------- | -----
-# 1      | 1       | 1
-# 2      | 4       | 8
-# 3      | 9       | 27
-# 4      | 16      | 64
-# 5      | 25      | 125
-# Bonus: Research python's format string specifiers to align the table
 
 # Convert given number grades into letter grades.
-
 # Prompt the user for a numerical grade from 0 to 100.
 # Display the corresponding letter grade.
 # Prompt the user to continue.
 # Assume that the user will enter valid integers for the grades.
 # The application should only continue if the user agrees to.
 # Grade Ranges:
+prompt=""
+while prompt != "quit":
+    prompt = input("Enter your numeric grade or quit to exit>")
+    if prompt.isdigit() == False:
+        print("you did not enter an numeric value, bye!")
+        break
+    grade = int(prompt)
+    if grade in range(99,101):
+        print("You got an A+")
+    elif grade in range(93,99):
+        print("You got an A")
+    elif grade in range(90,93):
+        print("You got an A-")
+
+    elif grade in range(88,90):
+        print("You got an B+")
+    elif grade in range (83, 88):
+        print("you got a B")
+    elif grade in range(80,83):
+        print("You got an B-")
+
+    elif grade in range(78,80):
+        print("You got an C+")
+    elif grade in range (73, 78):
+        print("you got a C")
+    elif grade in range(70,73):
+        print("You got an C-")
+
+    elif grade in range(68,70):
+        print("You got an D+")
+    elif grade in range (63, 68):
+        print("you got a D")
+    elif grade in range(60,63):
+        print("You got an D-")
+
+    elif grade in range(58,60):
+        print("You got an F+")
+    elif grade in range (50, 58):
+        print("you got a F")
+    elif grade in range(0,50):
+        print("You got an F-")
+    else:
+        print("Please enter a valid numerical grade ranging from 0-100")
+
 
 # A : 100 - 88
 # B : 87 - 80
