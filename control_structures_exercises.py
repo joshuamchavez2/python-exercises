@@ -101,7 +101,7 @@ else:
 
 i=1
 for i in range(1, 10):
-    print(str(i)* i)
+    print(str(i) * i)
 
 
 # Prompt the user for an odd number between 1 and 50. Use a loop and a break statement to continue prompting the user if they enter invalid input. (Hint: use the isdigit method on strings to determine this). Use a loop and the continue statement to output all the odd numbers between 1 and 50, except for the number the user entered.
