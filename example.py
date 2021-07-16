@@ -1,3 +1,7 @@
+
+import numpy as np
+import pandas as pd
+
 #This is a scratch pad to run random code and leave notes
 
 """ Create block comment:  Shift + Option + A  """
